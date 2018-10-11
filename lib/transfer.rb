@@ -3,7 +3,6 @@ require_relative '../lib/bank_account'
 class Transfer
   attr_accessor :status
   attr_reader :sender, :receiver, :amount
-  @@history = []
   
   def initialize(sender, receiver, amount)
     @sender = sender
@@ -37,7 +36,6 @@ end
       @receiver.balance -= @amount 
       @status = 'reversed'
     end
-    
   end
   
 end
