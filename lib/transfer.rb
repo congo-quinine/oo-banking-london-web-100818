@@ -1,8 +1,8 @@
 require_relative '../lib/bank_account'
 
 class Transfer
-  
-  attr_reader :sender, :receiver, :status, :amount
+  attr_accessor :status
+  attr_reader :sender, :receiver, :amount
   @@history = []
   
   def initialize(sender, receiver, amount)
